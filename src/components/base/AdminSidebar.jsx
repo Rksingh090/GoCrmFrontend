@@ -5,7 +5,9 @@ import {
   TrendingUp, IndianRupee,  Info, ScrollText, Waypoints,  
   ChevronDown, SquareSlash
 } from 'lucide-react';
-import { NavLink, Link, useLocation } from 'react-router-dom';
+import { 
+  NavLink, Link, useLocation 
+} from 'react-router-dom';
 import { useAppCtx } from '../../context/appContext';
 
 const sidebarMenu1 = [
@@ -122,7 +124,6 @@ const AdminSidebarMenuList = ({ menuList, children, mainClass, isSubmenu, open }
             <>
               <div
                 key={idx}
-                to={"#"}
                 onClick={toggleOpen}
                 className={`AdminSidemenuLink WithSubmenu ${pathname === sidebarItem?.link ? "active" : ""}`}
               >
@@ -143,10 +144,14 @@ const AdminSidebarMenuList = ({ menuList, children, mainClass, isSubmenu, open }
         }
 
         return (
-          <Link key={idx} as={NavLink} to={sidebarItem?.link} className={`AdminSidemenuLink ${pathname === sidebarItem?.link ? "active" : ""}`}>
+          <a 
+          key={idx} 
+          to={sidebarItem?.link} 
+          className={`AdminSidemenuLink ${pathname === sidebarItem?.link ? "active" : ""}`}
+          >
             {sidebarItem?.icon && sidebarItem?.icon}
             <p>{sidebarItem?.text}</p>
-          </Link>
+          </a>
         )
       })
       }
