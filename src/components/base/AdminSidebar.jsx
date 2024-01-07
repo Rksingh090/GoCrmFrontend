@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 import {
-  LayoutDashboardIcon, SearchIcon, 
-  Settings,  X, Moon, Sun,  CircleUser, BookUser,  
-  TrendingUp, IndianRupee,  Info, ScrollText, Waypoints,  
+  LayoutDashboardIcon, SearchIcon,
+  Settings, X, Moon, Sun, CircleUser, BookUser,
+  TrendingUp, IndianRupee, Info, ScrollText, Waypoints,
   ChevronDown, SquareSlash
 } from 'lucide-react';
-import { 
-  useLocation 
+import {
+  Link,
+  useLocation
 } from 'react-router-dom';
 import { useAppCtx } from '../../context/appContext';
 
@@ -142,14 +143,14 @@ const AdminSidebarMenuList = ({ menuList, children, mainClass, isSubmenu, open }
         }
 
         return (
-          <a 
-          key={idx} 
-          to={sidebarItem?.link} 
-          className={`AdminSidemenuLink ${pathname === sidebarItem?.link ? "active" : ""}`}
+          <Link
+            key={idx}
+            to={sidebarItem?.link}
+            className={`AdminSidemenuLink ${pathname === sidebarItem?.link ? "active" : ""}`}
           >
             {sidebarItem?.icon && sidebarItem?.icon}
             <p>{sidebarItem?.text}</p>
-          </a>
+          </Link>
         )
       })
       }
