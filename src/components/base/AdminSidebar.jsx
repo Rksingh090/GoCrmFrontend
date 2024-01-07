@@ -1,14 +1,15 @@
 import React, { useState } from 'react'
 import {
-  LayoutDashboardIcon, SearchIcon, 
-  Settings, User, X, Moon, Sun,  CircleUser, BookUser,  
-  TrendingUp, IndianRupee,  Info, ScrollText, Waypoints,  
+  LayoutDashboardIcon, SearchIcon,
+  Settings, X, Moon, Sun, CircleUser, BookUser,
+  TrendingUp, IndianRupee, Info, ScrollText, Waypoints,
   ChevronDown, SquareSlash
 } from 'lucide-react';
-import * as Switch from '@radix-ui/react-switch';
-import { Link, useLocation } from 'react-router-dom';
+import {
+  Link,
+  useLocation
+} from 'react-router-dom';
 import { useAppCtx } from '../../context/appContext';
-import AdminGlobalSearch from '../admin/search/AdminGlobalSearch';
 
 const sidebarMenu1 = [
   {
@@ -71,8 +72,6 @@ const sidebarMenu2 = [
   },
 ];
 
-
-
 const AdminSidebar = () => {
   const { toggleSidebar, toggleTheme, themeState, toggleSearchPanel } = useAppCtx();
 
@@ -124,7 +123,6 @@ const AdminSidebarMenuList = ({ menuList, children, mainClass, isSubmenu, open }
             <>
               <div
                 key={idx}
-                to={"#"}
                 onClick={toggleOpen}
                 className={`AdminSidemenuLink WithSubmenu ${pathname === sidebarItem?.link ? "active" : ""}`}
               >
@@ -145,7 +143,11 @@ const AdminSidebarMenuList = ({ menuList, children, mainClass, isSubmenu, open }
         }
 
         return (
-          <Link key={idx} to={sidebarItem?.link} className={`AdminSidemenuLink ${pathname === sidebarItem?.link ? "active" : ""}`}>
+          <Link
+            key={idx}
+            to={sidebarItem?.link}
+            className={`AdminSidemenuLink ${pathname === sidebarItem?.link ? "active" : ""}`}
+          >
             {sidebarItem?.icon && sidebarItem?.icon}
             <p>{sidebarItem?.text}</p>
           </Link>

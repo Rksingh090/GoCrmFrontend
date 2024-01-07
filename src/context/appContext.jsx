@@ -16,7 +16,7 @@ export const useAppCtx = () => useContext(appCtx);
 
 const AppContextProvider = ({ children }) => {
 
-    const [sidebarState, setSidebarState] = useState(true);
+    const [sidebarState, setSidebarState] = useState(false);
     const [themeState, setThemeState] = useState("light");
 
     const [searchPanelOpen, setSearchPanelOpen] = useState(false);

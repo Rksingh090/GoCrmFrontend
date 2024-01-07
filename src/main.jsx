@@ -10,8 +10,10 @@ import './styles/global/radix-ui.css';
 import AppContextProvider from './context/appContext.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-      <AppContextProvider>
-        <App />
-      </AppContextProvider>
+  <React.StrictMode>
+    <AppContextProvider>
+      <App />
+    </AppContextProvider>
+  </React.StrictMode>
   ,
 )

@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 
 import "./adminglobalsearch.css";
 
-const AdminGlobalSearch = ({ open }) => {
+const AdminGlobalSearch = ({ open, onClose }) => {
     const searchInputRef = useRef(null);
     const [inputVal, setInputVal] = useState("");
 
@@ -25,7 +25,7 @@ const AdminGlobalSearch = ({ open }) => {
                         onChange={(e) => setInputVal(e.target.value)}
                         placeholder='Search'
                     />
-                    <span className='codeArea em v2'>Esc</span>
+                    <span className='codeArea em v2 cursorPointer' onClick={onClose}>Esc</span>
                 </div>
 
                 <div className="AdminGlobalSearchRes">

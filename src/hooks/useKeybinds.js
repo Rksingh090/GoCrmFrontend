@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
-import _, { forEach } from 'lodash';
+import _ from 'lodash';
 
 const useKeybinds = (commands) => {
 
     const [keypress, setKeypress] = useState([]);
-    const holdOn = ['Control', 'Alt', 'Shift', 'CapsLock'];
-
-
+    
     useEffect(() => {
+        const holdOn = ['Control', 'Alt', 'Shift', 'CapsLock'];
+
         function hasDuplicates(array) {
             return new Set(array).size !== array.length;
         }
@@ -76,8 +76,8 @@ const useKeybinds = (commands) => {
             });
         };
 
-        const clearKeyPress = (e) => {
-            setKeypress(p => []);
+        const clearKeyPress = () => {
+            setKeypress((_) => []);
         }
 
         window.addEventListener('blur', clearKeyPress);
