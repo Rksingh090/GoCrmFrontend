@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import {
   LayoutDashboardIcon, SearchIcon, 
-  Settings, User, X, Moon, Sun,  CircleUser, BookUser,  
+  Settings,  X, Moon, Sun,  CircleUser, BookUser,  
   TrendingUp, IndianRupee,  Info, ScrollText, Waypoints,  
   ChevronDown, SquareSlash
 } from 'lucide-react';
 import { 
-  NavLink, Link, useLocation 
+  useLocation 
 } from 'react-router-dom';
 import { useAppCtx } from '../../context/appContext';
 
@@ -70,8 +70,6 @@ const sidebarMenu2 = [
     type: "separator"
   },
 ];
-
-
 
 const AdminSidebar = () => {
   const { toggleSidebar, toggleTheme, themeState, toggleSearchPanel } = useAppCtx();
