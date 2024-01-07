@@ -1,10 +1,23 @@
 import React from 'react'
 import "../../styles/admin/shortcuts.css"
 import { getCommandList } from '../../constant/commands';
+import { useAppCtx } from '../../context/appContext';
+import { useNavigate } from 'react-router-dom';
 
 const Shortcuts = () => {
+    const {
+        setSearchPanelOpen,
+        toggleTheme
+    } = useAppCtx();
 
-    const commands = getCommandList({});
+    const navigate = useNavigate();
+    const commands = getCommandList({
+        navigate,
+        setSearchPanelOpen,
+        toggleTheme
+    });
+
+
 
     return (
         <div className='ShortCutsPage'>
@@ -25,10 +38,9 @@ const Shortcuts = () => {
                         {commands.map((cmdItem, idx) => {
                             return (
                                 <tr key={idx}>
-                                    <td><span className="codeArea v2">{cmdItem?.short}</span></td>
+                                    <td><span onClick={cmdItem?.func} className="cursorPointer codeArea v2">{cmdItem?.short}</span></td>
                                     <td className='fontMD text-emphasis'>{cmdItem?.description}</td>
                                 </tr>
-
                             )
                         })}
                     </tbody>

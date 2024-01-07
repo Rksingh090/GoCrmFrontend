@@ -11,7 +11,11 @@ import { getCommandList } from '../../constant/commands';
 import { Menu } from 'lucide-react';
 
 const AdminLayout = () => {
-  const { sidebarState, searchPanelOpen, toggleTheme, setSearchPanelOpen, toggleSidebar } = useAppCtx();
+  const {
+    sidebarState, searchPanelOpen, toggleSearchPanel,
+    toggleTheme, setSearchPanelOpen, toggleSidebar
+  } = useAppCtx();
+
   const navigate = useNavigate();
 
   const commands = getCommandList({
@@ -24,7 +28,7 @@ const AdminLayout = () => {
     <div className={`AdminMainContainer ${sidebarState === true ? "open" : "close"}`}>
       <AdminSidebar />
       <div className='AdminContentContainer'>
-        <AdminGlobalSearch open={searchPanelOpen} />
+        <AdminGlobalSearch open={searchPanelOpen} onClose={toggleSearchPanel} />
         <div className='AdminNavMenuBtn onlyMobileView'>
           <div className="toggleMenuBtn">
             <Menu onClick={toggleSidebar} />
