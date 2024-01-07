@@ -5,10 +5,8 @@ import {
   TrendingUp, IndianRupee,  Info, ScrollText, Waypoints,  
   ChevronDown, SquareSlash
 } from 'lucide-react';
-import * as Switch from '@radix-ui/react-switch';
-import { Link, useLocation } from 'react-router-dom';
+import { NavLink, Link, useLocation } from 'react-router-dom';
 import { useAppCtx } from '../../context/appContext';
-import AdminGlobalSearch from '../admin/search/AdminGlobalSearch';
 
 const sidebarMenu1 = [
   {
@@ -145,7 +143,7 @@ const AdminSidebarMenuList = ({ menuList, children, mainClass, isSubmenu, open }
         }
 
         return (
-          <Link key={idx} to={sidebarItem?.link} className={`AdminSidemenuLink ${pathname === sidebarItem?.link ? "active" : ""}`}>
+          <Link key={idx} as={NavLink} to={sidebarItem?.link} className={`AdminSidemenuLink ${pathname === sidebarItem?.link ? "active" : ""}`}>
             {sidebarItem?.icon && sidebarItem?.icon}
             <p>{sidebarItem?.text}</p>
           </Link>
