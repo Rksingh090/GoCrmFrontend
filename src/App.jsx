@@ -15,6 +15,10 @@ import Shortcuts from './pages/admin/Shortcuts';
 
 const router = createBrowserRouter([
   {
+    path: "/",
+    element: <h2>Hello GOCRM</h2>
+  },
+  {
     path: "/admin",
     element: <AdminLayout />,
     children: [
