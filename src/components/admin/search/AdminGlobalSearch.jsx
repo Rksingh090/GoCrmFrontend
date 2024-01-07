@@ -33,7 +33,7 @@ const AdminGlobalSearch = ({ open }) => {
                 </div>
 
                 <div className='AdminGlobalSearchFooter'>
-                    <span>Open Search with: <span className='codeArea'>Ctrl + k</span></span>
+                    <span>Open Search with: <span className='codeArea v2'>Ctrl + k</span></span>
                 </div>
             </div>
         </div>

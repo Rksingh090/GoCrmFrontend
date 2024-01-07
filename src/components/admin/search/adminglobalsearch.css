@@ -9,6 +9,7 @@
     align-items: center;
     background-color: var(--bg-backdrop);
     backdrop-filter: blur(2px);
+    z-index: 20;
 }
 .AdminGlobalSearch.close {
     display: none;
