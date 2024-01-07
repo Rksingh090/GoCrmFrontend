@@ -1,0 +1,12 @@
+.bg-subtle {
+    background-color: var(--bg-subtle);
+}
+.bg-emphasis {
+    background-color: var(--bg-emphasis);
+}
+.text-subtle {
+    color: var(--text-subtle);
+}
+.text-muted {
+    color: var(--text-muted);
+}

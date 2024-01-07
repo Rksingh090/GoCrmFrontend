@@ -1,0 +1,139 @@
+.AdminMainContainer {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    height: 100%;
+    transition: all .4s cubic-bezier(0.075, 0.82, 0.165, 1);
+    position: relative;
+    grid-template-columns: var(--adminSideWidth) 1fr;
+    background-color: var(--bg);
+}
+
+
+.AdminSidebar {
+    transition: all .5s ease;
+    background-color: var(--bg-muted);
+    color: var(--text);
+    height: 100vh;
+    width: 100%;
+    border-right: 1px solid var(--border-muted);
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    z-index: 15;
+}
+
+.AdminSideHeader {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    width: 100%;
+    gap: 0px;
+}
+
+.AdminMenuSpacer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.AdminSidebarMenus {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+    width: 100%;
+}
+.AdminSidebarMenus.LPad {
+    padding: 0px;
+    padding-left: 20px;
+}
+
+.AdminSidebarMenus.submenuClose{
+    height: 0;
+    overflow: hidden;
+}
+.AdminSidebarMenus.submenuOpen{
+    height: auto;
+}
+
+.AdminSidemenuLink {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    gap: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+
+.AdminSidemenuLink.WithSubmenu{
+    justify-content: space-between;
+}
+
+
+.AdminSidemenuLink.active {
+    background-color: var(--bg-emphasis);
+}
+
+.AdminSidemenuLink:hover {
+    background: var(--bg-subtle);
+}
+
+.AdminSidebarThemeBtn {
+    display: flex;
+    flex-direction: row;
+    padding: 5px 10px;
+    gap: 5px;
+    /* justify-content: space-between; */
+    align-items: center;
+    user-select: none;
+}
+
+.AdminContentContainer {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.AdminNavMenuBtn {
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.AdminNavMenuBtn .toggleMenuBtn {
+    padding: 8px;
+    background-color: var(--bg-emphasis);
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+}
+
+@media only screen and (max-width: 426px) {
+    .AdminMainContainer {
+        grid-template-columns: 1fr;
+    }
+
+    .AdminSidebar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: var(--adminSideWidth);
+        transition: all .3s ease;
+    }
+
+    .AdminMainContainer.close .AdminSidebar {
+        transform: translateX(-100%);
+    }
+}

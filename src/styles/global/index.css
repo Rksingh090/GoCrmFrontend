@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --ff: "Poppins", sans-serif;
+
+  font-family: "Poppins", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* height and width  */
+  --adminSideWidth: 220px;
+  --adminBodyWidth: calc(100vh - var(--adminNavHeight));
+
+
+  /* colors */
+
+  --bg-emphasis: #e5e7eb;
+  --bg: #fff;
+  --bg-subtle: #f3f4f6;
+  --bg-muted: #f9fafb;
+  --bg-inverted: #0f0f0f;
+  --bg-info: #f6f9fe;
+  --bg-success: #e4fbe9;
+  --bg-attention: #fcefd9;
+  --bg-error: hsla(3,66,93,1);
+  --bg-dark-error: #772522;
+  --border-emphasis: #9ca3b0;
+  --border: #d1d5db;
+  --border-subtle: #e5e7eb;
+  --border-booker: #e5e7eb;
+  --border-muted: #f3f4f6;
+  --border-error: #aa2f27;
+  --text-emphasis: #384252;
+  --text: #384252;
+  --text-subtle: #6b7280;
+  --text-muted: #9ca3b0;
+  --text-inverted: #fff;
+  --text-info: #253883;
+  --text-success: #285231;
+  --text-attention: #74331b;
+  --text-error: #772522;
+  --brand: #111827;
+  --brand-emphasis: #0f0f0f;
+  --brand-text: #fff;
+  --bg-backdrop: #0002;
+}
+
+[data-theme="dark"] {
+  --bg-emphasis: #525252;
+  --bg: #1a1a1a;
+  --bg-subtle: #2e2e2e;
+  --bg-muted: #1f1f1f;
+  --bg-inverted: #f3f4f6;
+  --bg-info: #253883;
+  --bg-success: #285231;
+  --bg-attention: #74331b;
+  --bg-error: #772522;
+  --bg-dark-error: #772522;
+  --border-emphasis: #757575;
+  --border: #575757;
+  --border-subtle: #383838;
+  --border-booker: #383838;
+  --border-muted: #2e2e2e;
+  --border-error: #aa2f27;
+  --text-emphasis: #fcfcfd;
+  --text: #d6d6d6;
+  --text-subtle: #a6a6a6;
+  --text-muted: #575757;
+  --text-inverted: #1a1a1a;
+  --text-info: #dee9fc;
+  --text-success: #e4fbe9;
+  --text-attention: #fcefd9;
+  --text-error: #f9e3e1;
+  --brand: #fff;
+  --brand-emphasis: #9ca3b0;
+  --brand-text: #000;
+  --bg-backdrop: #fff2;
+}
+
+*, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--text);
+}
+
+a {
+  font-size: 12px;
+  text-decoration: none;
+  color: inherit;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 700;
+}
+h2 {
+  font-size: 24px;
+  font-weight: 600;
+}
+h3 {
+  font-size: 20px;
+  font-weight: 500;
+}
+h4 {
+  font-size: 18px;
+  font-weight: 500;
+}
+h5 {
+  font-size: 14px;
+  font-weight: 500;
+}
+h5 {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+button {
+  outline: none;
+  border: none;
+  background-color: inherit;
+  color: inherit;
+  box-sizing: border-box;
+}

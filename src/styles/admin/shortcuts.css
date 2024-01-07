@@ -1,0 +1,36 @@
+.ShortCutsPage {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.ShortCutPageDescription {
+    font-style: 22px;
+    color: var(--text-subtle);
+    line-height: 28px;
+    max-width: 900px;
+    text-align: justify;
+}
+
+
+
+.ShortCutPageTableRS {
+    display: flex;
+    flex-direction: column;
+}
+
+.ShortCutPageTable {
+    margin-top: 40px;
+}
+
+@media only screen and (min-width: 800px) {
+    .ShortCutPageTableRS {
+        align-items: center;
+    }
+    .ShortCutPageTable {   
+        width: 550px;
+    }
+}
